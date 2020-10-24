@@ -65,7 +65,10 @@ inline void print_ip(struct sockaddr *ip) {
 		source_ip_addr=v4->sin_addr;
 		printf("\n Source IP address in hex (32-bit unsigned long) %x\n",ntohl(source_ip_addr.s_addr));
 		printf("Source IP address hashed in hex (31-bit long long) %ld\n",
-			hash31(3,5,ntohl(source_ip_addr.s_addr)));
+			hash31(3721,917,ntohl(source_ip_addr.s_addr)));
+		//
+		//this is a 2-Universal hash function h=(ax+b)mod p, where a=3, b=5
+		//
 	}
 
 	if (ip->sa_family == AF_INET6) {
