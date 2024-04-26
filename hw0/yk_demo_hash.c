@@ -105,11 +105,11 @@ void per_packet(libtrace_packet_t *packet)
 	//******************
 	payload_length=trace_get_payload_length(packet);
 	frame_length=trace_get_framing_length(packet);
-	printf("frame_Length=%d\n",frame_length);
+	printf("frame_Length=%ld\n",frame_length);
 	if (payload_length == 0) 
 		printf("can not get payload length");
 	else
-		printf("payload_Length=%d\n",payload_length);	
+		printf("payload_Length=%ld\n",payload_length);	
 
 	/* Get the source IP address */
 	/* Note that we pass a casted sockaddr_storage into this function. This
