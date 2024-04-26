@@ -178,7 +178,7 @@ int RunExact(int thresh)
 {
   int i,hh, sum, j;
   StartTheClock();
-  hh=0; sum=-1, j;
+  hh=0; sum=-1;
 
   j=0; sumsq=0;
   for (i=0;i<n;i++) 
@@ -197,7 +197,7 @@ int RunExact(int thresh)
 	  hh++;
 	}
     }
-  printf("Exact used %d bytes, took %ld ms.  Zipfparam = %f\n",
+  printf("Exact used %ld bytes, took %ld ms.  Zipfparam = %f\n",
   n*sizeof(int),StopTheClock(),zipfpar);
   printf("There were %d items above threshold of %d, for phi=%f, n=%d\n",
 	 hh,thresh,phi, range);
@@ -247,7 +247,7 @@ int main(int argc, char **argv)
       CMH_Update(cmh,-stream[i],-1);      
   uptime=StopTheClock();
   StartTheClock();
-  uilist=CMH_FindHH(cmh,thresh);
+  uilist=(unsigned int *)CMH_FindHH(cmh,thresh);
   outtime=StopTheClock(); 
   CheckOutput("CM",uilist,thresh,hh, uptime, outtime, CMH_Size(cmh));
   free(uilist);
