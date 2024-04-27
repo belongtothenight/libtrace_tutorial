@@ -13,6 +13,7 @@
 #include <err.h>
 #include <assert.h>
 #include <getopt.h>
+#include <stdlib.h>
 
 uint64_t udp_header = 0;
 uint64_t udp_payload = 0;
