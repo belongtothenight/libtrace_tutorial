@@ -37,7 +37,7 @@
  * effective. Libtrace will have provided us a pointer to the start of the
  * MAC address within the packet, so we can just use array indices to grab
  * each byte of the MAC address in turn */
-inline void print_mac(uint8_t *mac) {
+static inline void print_mac(uint8_t *mac) {
 
 	printf("%02x:%02x:%02x:%02x:%02x:%02x \n", mac[0], mac[1], mac[2], mac[3],
 		mac[4], mac[5]);
@@ -46,7 +46,7 @@ inline void print_mac(uint8_t *mac) {
 
 /* Given a sockaddr containing an IP address, prints the IP address to stdout
  * using the common string representation for that address type */
-inline void print_ip(struct sockaddr *ip) {
+static inline void print_ip(struct sockaddr *ip) {
 
 	char str[20];
 	struct in_addr source_ip_addr;//yk
@@ -105,11 +105,11 @@ void per_packet(libtrace_packet_t *packet)
 	//******************
 	payload_length=trace_get_payload_length(packet);
 	frame_length=trace_get_framing_length(packet);
-	printf("frame_Length=%d\n",frame_length);
+	printf("frame_Length=%ld\n",frame_length);
 	if (payload_length == 0) 
 		printf("can not get payload length");
 	else
-		printf("payload_Length=%d\n",payload_length);	
+		printf("payload_Length=%ld\n",payload_length);	
 
 	/* Get the source IP address */
 	/* Note that we pass a casted sockaddr_storage into this function. This

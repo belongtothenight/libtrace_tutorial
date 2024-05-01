@@ -104,8 +104,14 @@ void CM_Destroy(CM_type * cm)
       free(cm->counts);
       cm->counts=NULL;
     }
-  if (cm->hasha) free(cm->hasha); cm->hasha=NULL;
-  if (cm->hashb) free(cm->hashb); cm->hashb=NULL;
+  if (cm->hasha) {
+      free(cm->hasha);
+      cm->hasha=NULL;
+  }
+  if (cm->hashb) {
+      free(cm->hashb);
+      cm->hashb=NULL;
+  }
   free(cm);  cm=NULL;
 }
 
@@ -309,8 +315,14 @@ void CMF_Destroy(CMF_type * cm)
       free(cm->counts);
       cm->counts=NULL;
     }
-  if (cm->hasha) free(cm->hasha); cm->hasha=NULL;
-  if (cm->hashb) free(cm->hashb); cm->hashb=NULL;
+  if (cm->hasha) {
+      free(cm->hasha);
+      cm->hasha=NULL;
+  }
+  if (cm->hashb) {
+      free(cm->hashb);
+      cm->hashb=NULL;
+  }
   free(cm);  cm=NULL;
 }
 
