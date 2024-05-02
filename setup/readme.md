@@ -1,5 +1,7 @@
 # Setup Libtrace Development Environment
 
+This directory is a modified version of [ACN_Code/hw4_libtrace_setup](https://github.com/belongtothenight/ACN_Code/tree/main/hw4_libtrace_setup). If any bugs, issues, or requests, please create a new issue or send me a mail via [dachuan516@gmail.com](dachuan516@gmail.com).
+
 This directory only responsible for setting up and removing libtrace development environment and related code.
 
 1. uthash
@@ -15,12 +17,14 @@ You will be able to select different parts of the options listed in [./config.in
 To use this script, clone this repository, navigate to this directory, and run the setup script:
 
 ```bash
-git clone https://github.com/belongtothenight/ACN_Code.git
-cd ACN_Code/hw4_libtrace_setup
+git clone https://github.com/ylai/libtrace_tutorial.git
+cd libtrace_tutorial/setup
 bash ./setup.sh
 ```
 
 If you want to make sure things are running correctly, you can check the [Demo](#demo) section for the video links and log files, and [Debug](#debug) section for common issues and solutions.
+
+In default settings, everything including this repo will be installed in `/opt` directory. If you want to change the installation directory, please modify the [./config.ini](./config.ini) file.
 
 ## Tested Platforms
 
