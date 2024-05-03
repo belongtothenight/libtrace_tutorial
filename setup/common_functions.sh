@@ -29,6 +29,15 @@ load_preset () {
     check_var script_stat                   $error_exit_code
 
     if [ $verbose == 1 ]; then
+        echo_notice "$message1" "$message2" "Checking variable values"
+    fi
+    #[ PARAM - TASKS ] X 5(skip)
+    #[ PARAM - EXECUTION MODE ] X 1
+    if [ $script_stat != "dev" ] && [ $script_stat != "prod" ]; then
+        echo_error "$message1" "$message2" "Invalid script_stat: should be either dev or prod" $error_exit_code
+    fi
+
+    if [ $verbose == 1 ]; then
         echo_notice "$message1" "$message2" "Setting private variables"
     fi
     wget_flags="-nv --show-progress"
@@ -55,9 +64,6 @@ load_preset () {
         :
     elif [ $script_stat == "prod" ]; then
         make_flags="-j$(nproc)"
-    else
-        echo_error "$message1" "$message2" "Invalid script_stat"
-        exit $error_exit_code
     fi
     libwandder_file="${libwandder_name}-${libwandder_release_url##*/}"
     libwandder_ln="${libwandder_file//.tar.gz}"
