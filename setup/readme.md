@@ -1,6 +1,7 @@
 # Setup Libtrace Development Environment
 
-This directory is a modified version of [ACN_Code/hw4_libtrace_setup](https://github.com/belongtothenight/ACN_Code/tree/main/hw4_libtrace_setup). If any bugs, issues, or requests, please create a new issue or send me a mail via [dachuan516@gmail.com](dachuan516@gmail.com).
+This directory is a modified version of [ACN_Code/hw4_libtrace_setup](https://github.com/belongtothenight/ACN_Code/tree/main/hw4_libtrace_setup). If any bugs, issues, or requests, please create a new issue or send me a mail via [dachuan516@gmail.com](dachuan516@gmail.com). Visit to find the latest update!
+
 
 This directory only responsible for setting up and removing libtrace development environment and related code.
 
