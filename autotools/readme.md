@@ -1,5 +1,7 @@
 # Setup for following structure
 
+This directory is originally created in [ACN_Code/hw5_hw5_c_trace_analyze](https://github.com/belongtothenight/ACN_Code/tree/main/hw5_c_trace_analyze). Visit to find the latest update!
+
 Default structure is started from [https://github.com/belongtothenight/autotools_init_setup/tree/main/type2](https://github.com/belongtothenight/autotools_init_setup/tree/main/type2).
 
 These program is only developed on debian based Linux system.
